@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f2027;
+    background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+    color: white;
+}
+
+/* Tarjeta principal */
+.card {
+    width: 400px;
+    margin: 80px auto;
+    padding: 30px;
+    text-align: center;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    animation: aparecer 1.5s ease;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-top: 0;
+    font-weight: normal;
+    color: #00e5ff;
+}
+
+.info p {
+    margin: 10px 0;
+}
+
+/* Imagen */
+.img-box img {
+    width: 250px;
+    margin-top: 20px;
+    border-radius: 10px;
+    transition: transform 0.5s;
+}
+
+.img-box img:hover {
+    transform: scale(1.1);
+}
+
+/* Animación entrada */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Marquesina */
+.marquee {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: black;
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+.marquee span {
+    display: inline-block;
+    white-space: nowrap;
+    animation: mover 12s linear infinite;
+    font-size: 18px;
+    color: #00ffcc;
+}
+
+@keyframes mover {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
